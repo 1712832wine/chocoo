@@ -1,0 +1,57 @@
+.footer {
+  background: #131313;
+
+  &__top {
+    border-bottom: 1px solid #505050;
+    padding: 53px 260px 62px 260px;
+  }
+  &__bottom {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+    span {
+      color: white;
+    }
+  }
+  .logo {
+    background: url("https://chocoo.newzen.site/images/chocoo-white-logo.png");
+    background-size: cover;
+    background-position: center center;
+    width: 187px;
+    height: 41px;
+    margin-bottom: 55px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+    .about__item {
+      display: block;
+      color: #fff;
+    }
+  }
+}
+.d-flex {
+  display: flex;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  &__insta {
+    background: url("https://chocoo.newzen.site/images/white-instagram-icon.png");
+    background-size: contain;
+  }
+  &__fb {
+    background: url("https://chocoo.newzen.site/images/white-facebook-icon.png");
+    background-size: contain;
+  }
+}
+.mr {
+  margin-right: 5px;
+}

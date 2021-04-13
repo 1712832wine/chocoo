@@ -1,0 +1,62 @@
+.header {
+  position: fixed;
+  overflow: hidden;
+  background-color: #fff;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+    0 1px 10px 0 rgb(0 0 0 / 12%);
+  padding: 15px 42px;
+  .logo {
+    background: url("https://chocoo.newzen.site/images/chocoo-logo.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 28px;
+    margin-bottom: 14px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search-box {
+      width: 212px;
+    }
+    .search {
+      background: url("https://chocoo.newzen.site/images/magnify-icon.png");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 31px !important;
+      height: 31px !important;
+      border-radius: 50%;
+    }
+    .icon-box {
+      width: 31px !important;
+      height: 31px !important;
+      border-radius: 50%;
+    }
+    .icon {
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+    .title {
+      text-transform: uppercase;
+      font-size: 14.5px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+    .titles {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 850px;
+    }
+  }
+}

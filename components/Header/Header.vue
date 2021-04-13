@@ -1,32 +1,36 @@
 <template>
-  <div class="header">
-    <nuxt-link to="/">
-      <div class="logo"></div>
-    </nuxt-link>
-    <div class="menu">
-      <div class="search-box">
-        <div><div class="search"></div></div>
-      </div>
+  <b-navbar class="header">
+    <template #brand>
+      <b-navbar-item tag="nuxt-link" :to="{ path: '/' }" class="logo">
+        <img
+          src="https://chocoo.newzen.site/images/chocoo-logo.png"
+          alt="Go to homepage"
+        />
+      </b-navbar-item>
+    </template>
+    <template #start>
+      <b-navbar-item
+        tag="nuxt-link"
+        v-for="item in menu"
+        :key="item.id"
+        :to="{ path: item.to }"
+        class="list-title"
+      >
+        {{ item.title }}
+      </b-navbar-item>
+    </template>
 
-      <div class="titles">
-        <nuxt-link
-          v-for="item in menu"
-          :key="item.id"
-          :to="item.to"
-          class="title"
-          >{{ item.title }}</nuxt-link
-        >
-      </div>
-      <nuxt-link v-for="item in logo" :key="item.id" :to="item.to">
-        <div class="icon-box">
-          <div
-            class="icon"
-            :style="{ 'background-image': 'url(' + item.url + ')' }"
-          ></div>
+    <template #end>
+      <b-navbar-item tag="div">
+        <div class="buttons">
+          <nuxt-link class="button is-primary" to="/register">
+            <strong>Sign up</strong>
+          </nuxt-link>
+          <nuxt-link class="button is-light" to="/login"> Log in </nuxt-link>
         </div>
-      </nuxt-link>
-    </div>
-  </div>
+      </b-navbar-item>
+    </template>
+  </b-navbar>
 </template>
 <script>
 export default {
@@ -57,24 +61,6 @@ export default {
           id: 5,
           title: "accessories",
           to: "/accessories",
-        },
-      ],
-      logo: [
-        {
-          id: 1,
-          url: "https://chocoo.newzen.site/images/nav-heart-icon.png",
-          to: "/login",
-        },
-        {
-          id: 2,
-          url: "https://chocoo.newzen.site/images/cart-icon.png",
-          to: "/cart",
-        },
-
-        {
-          id: 3,
-          url: "https://chocoo.newzen.site/images/user-icon.png",
-          to: "/register",
         },
       ],
     };

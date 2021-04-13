@@ -2,17 +2,21 @@
   <div class="footer">
     <div class="footer__top">
       <nuxt-link to="/"><div class="logo"></div></nuxt-link>
-      <div class="container">
+      <div class="columns">
         <!-- CHOCOO OFFICIAL -->
-        <div>
+        <div class="column is-half official">
           <h1>chocoo official</h1>
           <div class="input__group">
-            <input type="text" class="input" />
-            <button>Send</button>
+            <input
+              type="text"
+              placeholder="Customer@chocoo.com.vn"
+              class="input"
+            />
+            <button class="button is-warning">Search</button>
           </div>
         </div>
         <!-- ABOUT US -->
-        <div>
+        <div class="column">
           <h1>about us</h1>
           <nuxt-link
             v-for="item in aboutData"
@@ -23,15 +27,18 @@
           >
         </div>
         <!-- SOCIAL -->
-        <div>
+        <div class="column social">
           <h1>social</h1>
-          <div class="d-flex">
-            <div>
-              <div class="icon icon__insta mr"></div>
-            </div>
-            <div>
-              <div class="icon icon__fb"></div>
-            </div>
+          <div class="block">
+            <a href="https://www.facebook.com/chocoo.official/" target="_blank">
+              <b-icon icon="facebook" size="is-large"></b-icon>
+            </a>
+            <a
+              href="https://www.instagram.com/chocoo.official/"
+              target="_blank"
+            >
+              <b-icon icon="instagram" size="is-large"></b-icon>
+            </a>
           </div>
         </div>
       </div>

@@ -1,0 +1,53 @@
+// .carousel-item {
+//   height: 500px;
+
+//   section {
+//     height: 100%;
+
+//     img {
+//       height: 100%;
+//     }
+//   }
+// }
+
+.images__box {
+  width: 100%;
+
+  img {
+    cursor: pointer;
+    aspect-ratio: 2.8;
+    object-fit: cover;
+  }
+}
+
+.carousel {
+  .is-dots {
+    height: 0.8rem !important;
+    width: 0.8rem !important;
+    opacity: 0.4;
+  }
+
+  .carousel-arrow {
+    .icon.has-icons-left {
+      left: 0rem;
+      height: 50px;
+      border-radius: 0 5px 5px 0;
+      opacity: 0.4;
+
+      &:hover {
+        border: none;
+      }
+    }
+
+    .icon.has-icons-right {
+      right: 0;
+      height: 50px;
+      border-radius: 5px 0 0 5px;
+      opacity: 0.4;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}

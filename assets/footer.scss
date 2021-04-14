@@ -5,7 +5,7 @@
   &__top {
 
     border-bottom: 1px solid #505050;
-    padding: 53px 260px 62px 260px;
+    padding-bottom: 62px;
 
     .logo {
       background: url("https://chocoo.newzen.site/images/chocoo-white-logo.png");
@@ -13,6 +13,7 @@
       background-repeat: no-repeat;
       height: 41px;
       margin-bottom: 55px;
+
     }
 
     h1 {
@@ -24,6 +25,7 @@
 
     .input__group {
       display: flex;
+      width: 80%;
 
       input {
         border-top-right-radius: 0px;
@@ -44,10 +46,6 @@
       }
     }
 
-    .official {
-      padding-right: 75px;
-    }
-
     .about__item {
       display: block;
       color: #fff;
@@ -57,6 +55,14 @@
     .social {
       a {
         color: #00d1b2;
+      }
+
+      .icon {
+        .mdi.mdi-48px {
+          &::before {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
@@ -72,4 +78,34 @@
     }
   }
 
+}
+
+@media screen and (max-device-width: 768px) {
+  .logo {
+    background-position: center !important;
+  }
+
+  .input__group {
+    margin: auto;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  .icon {
+    .mdi.mdi-24px {
+      &::before {
+        font-size: 45px;
+      }
+    }
+
+    &__fb {
+      margin-right: 10px;
+    }
+
+    &__insta {
+      margin-left: 10px;
+    }
+  }
 }

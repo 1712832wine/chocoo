@@ -1,11 +1,12 @@
 <template>
   <div class="footer">
-    <div class="footer__top">
+    <div class="footer__top container">
       <nuxt-link to="/"><div class="logo"></div></nuxt-link>
-      <div class="columns">
+      <div class="columns is-centered">
         <!-- CHOCOO OFFICIAL -->
         <div class="column is-half official">
           <h1>chocoo official</h1>
+
           <div class="input__group">
             <input
               type="text"
@@ -31,13 +32,13 @@
           <h1>social</h1>
           <div class="block">
             <a href="https://www.facebook.com/chocoo.official/" target="_blank">
-              <b-icon icon="facebook" size="is-large"></b-icon>
+              <b-icon icon="facebook" class="icon icon__fb"></b-icon>
             </a>
             <a
               href="https://www.instagram.com/chocoo.official/"
               target="_blank"
             >
-              <b-icon icon="instagram" size="is-large"></b-icon>
+              <b-icon icon="instagram" class="icon icon__insta"></b-icon>
             </a>
           </div>
         </div>
@@ -63,6 +64,6 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/footer.scss";
 </style>

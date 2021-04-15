@@ -8,9 +8,15 @@
 <script>
 import Header from "@/components/Header/Header.vue";
 import Footer from "@/components/Footer/Footer.vue";
-export default {};
+export default {
+  components: { Header, Footer },
+};
 </script>
 <style>
+.mt {
+  margin-top: 120px;
+  height: 2500px;
+}
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -28,9 +34,5 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-}
-.mt {
-  margin-top: 120px;
-  height: 1500px;
 }
 </style>

@@ -1,8 +1,19 @@
 <template>
   <div class="homepage">
-    <Carousel :carousel="carousel" />
-    <NewArrival class="padding-top" />
-    <Banner class="padding-top"> <Description :desc="desc_banner" /></Banner>
+    <!-- CAROUSEL -->
+    <Carousel :carousel="carousel">
+      <Description v-for="item in desc" :key="item.id" :desc="item" />
+    </Carousel>
+    <!-- NEW ARRIVAL -->
+    <Description :desc="desc_arrival" class="arrdecs padding-top" />
+    <NewArrival />
+    <!-- BANNER -->
+    <Banner class="padding-top">
+      <Description :desc="desc_banner" />
+    </Banner>
+    <!-- BEST SELLER -->
+    <Description :desc="desc_bestseller" class="arrdecs padding-top" />
+    <NewArrival />
   </div>
 </template>
 
@@ -15,6 +26,24 @@ export default {
   components: { Carousel, Description, NewArrival, Banner },
   data() {
     return {
+      desc_bestseller: {
+        title: "best seller",
+        content:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        seemore: {
+          text: "see more",
+          to: "/best-seller",
+        },
+      },
+      desc_arrival: {
+        title: "new Arrival",
+        content:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        seemore: {
+          text: "see more",
+          to: "/new-arrival",
+        },
+      },
       desc_banner: {
         subtitle: "new arrival",
         title: "VOIE LACTÉE",

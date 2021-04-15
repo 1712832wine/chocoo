@@ -15,7 +15,6 @@ export default {
 <style>
 .mt {
   margin-top: 120px;
-  height: 2500px;
 }
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",

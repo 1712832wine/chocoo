@@ -15,3 +15,6 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+@import "@/assets/description.scss";
+</style>

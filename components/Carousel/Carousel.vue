@@ -3,7 +3,7 @@
     <b-carousel-item v-for="item in carousel" :key="item.id">
       <section class="images__box">
         <b-image :src="item.src" alt="" responsive></b-image>
-        <slot :name="item.id"></slot>
+        <slot></slot>
       </section>
     </b-carousel-item>
   </b-carousel>

@@ -1,29 +1,104 @@
 <template>
-  <div class="new-arrival container">
-    <Description :desc="desc" class="arrdecs" />
+  <div class="new-arrival container box">
+    <div class="columns is-multiline">
+      <div
+        v-for="item in card"
+        :key="item.id"
+        class="column is-one-quarter-desktop is-half-tablet is-mobile"
+      >
+        <Card :card="item" />
+      </div>
+    </div>
   </div>
-</template>
+</template>                         
 <script>
-import Description from "@/components/Description/Description.vue";
+import Card from "@/components/Card/Card.vue";
 export default {
-  components: { Description },
+  components: { Card },
   data() {
     return {
-      desc: {
-        id: 1,
-
-        title: "new Arrival",
-        content:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-        seemore: {
-          text: "see more",
-          to: "/new-arrival",
+      card: [
+        {
+          id: 1,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
         },
-      },
+        {
+          id: 2,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 3,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 4,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 5,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 6,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 7,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 8,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 9,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 10,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+
+        {
+          id: 11,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+        {
+          id: 12,
+          src: "https://picsum.photos/400/300",
+          title: "Quần kaki",
+          price: 40000,
+        },
+      ],
     };
   },
 };
 </script>
 <style lang="scss">
 @import "@/assets/new_arrival.scss";
+.new-arrival {
+  background: #dcdcdc;
+}
 </style>

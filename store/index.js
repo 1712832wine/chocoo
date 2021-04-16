@@ -1,15 +1,23 @@
+import { BASE_URL } from "@/plugins/api.js";
 export const state = () => ({
-  carousel: []
+  carousel: [],
+  desc: []
 });
 export const mutations = {
-  setCarousel(state, carousel) {
-    state.carousel = carousel;
+  setCarousel(state, data) {
+    state.carousel = data;
+  },
+  setDesc(state, data) {
+    state.desc = data;
   }
 };
 export const actions = {
   async callCarousel({ commit }) {
-    const res = await this.$axios.$get("http://127.0.0.1:8000/carousel");
-    console.log(res);
-    commit("setCarousel", res);
+    const data = await this.$axios.$get(`${BASE_URL}/carousel`);
+    commit("setCarousel", data);
+  },
+  async callDesc({ commit }) {
+    const data = await this.$axios.$get(`${BASE_URL}/desc`);
+    commit("setDesc", data);
   }
 };

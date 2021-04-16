@@ -53,57 +53,20 @@ export default {
           to: "/collection",
         },
       },
-      desc: [
-        {
-          id: 1,
-          subtitle: "collection",
-          title: "VOIE LACTÉE",
-          content:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-          seemore: {
-            text: "seemore",
-            to: "/collection",
-          },
-        },
-        {
-          id: 2,
-          subtitle: "collection",
-          title: "VOIE LACTÉE",
-          content:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-          seemore: {
-            text: "seemore",
-            to: "/collection",
-          },
-        },
-        {
-          id: 3,
-          subtitle: "collection",
-          title: "VOIE LACTÉE",
-          content:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-          seemore: {
-            text: "seemore",
-            to: "/collection",
-          },
-        },
-      ],
-      carousel: [],
     };
   },
   computed: {
     ...mapState({
-      // carousel: function (state) {
-      //   return state.carousel;
-      // },
       carousel: (state) => state.carousel,
+      desc: (state) => state.desc,
     }),
   },
   methods: {
-    ...mapActions(["callCarousel"]),
+    ...mapActions(["callCarousel", "callDesc"]),
   },
   created() {
     this.callCarousel();
+    this.callDesc();
   },
 };
 </script>

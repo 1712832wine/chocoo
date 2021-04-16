@@ -22,6 +22,7 @@ import Description from "@/components/Description/Description.vue";
 import Carousel from "@/components/Carousel/Carousel.vue";
 import NewArrival from "@/components/NewArrival/NewArrival.vue";
 import Banner from "@/components/Banner/Banner.vue";
+import { mapState, mapActions } from "vuex";
 export default {
   components: { Carousel, Description, NewArrival, Banner },
   data() {
@@ -87,22 +88,22 @@ export default {
           },
         },
       ],
-      carousel: [
-        {
-          id: 1,
-          src: "https://chocoo.newzen.site/images/banner-img.png",
-        },
-        {
-          id: 2,
-          src:
-            "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/is_my_cat_normal_slideshow/1800x1200_is_my_cat_normal_slideshow.jpg",
-        },
-        {
-          id: 3,
-          src: "https://chocoo.newzen.site/images/banner-img.png",
-        },
-      ],
+      carousel: [],
     };
+  },
+  computed: {
+    ...mapState({
+      // carousel: function (state) {
+      //   return state.carousel;
+      // },
+      carousel: (state) => state.carousel,
+    }),
+  },
+  methods: {
+    ...mapActions(["callCarousel"]),
+  },
+  created() {
+    this.callCarousel();
   },
 };
 </script>

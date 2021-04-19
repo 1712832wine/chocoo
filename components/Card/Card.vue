@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <nuxt-link class="card" tag="div" :to="`/item-detail/${card.id}`">
     <div class="card-image">
       <b-image :src="card.src" alt="An image"> </b-image>
     </div>
@@ -7,7 +7,7 @@
       <p class="title">{{ card.title }}</p>
       <p class="subtitle">{{ card.price }}</p>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 <script>
 export default {

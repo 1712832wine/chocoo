@@ -1,4 +1,4 @@
-.header{
+.header {
   position: fixed;
   overflow: hidden;
   background-color: #fff;
@@ -7,13 +7,56 @@
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
     0 1px 10px 0 rgb(0 0 0 / 12%);
   padding: 15px 42px;
-  .logo{
+
+  .wrapper {
+    position: relative;
+  }
+
+  .logo {
     display: block;
     text-align: center;
     width: 100%;
   }
-  .list-title{
+
+  .list-title {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.87);
+  }
+
+  // Desktop
+  @media screen and (min-width: 1024px) {
+    span {
+      display: none;
+    }
+  }
+
+  // Tablet and Smallers
+  @media screen and (max-width: 1023px) {
+    .burger {
+      position: absolute;
+      left: 0;
+    }
+
+    .navbar-menu {
+      display: block;
+      transform: translateX(-100%);
+      transition-duration: 1s;
+      width: 50%;
+      position: fixed;
+      top: 83px;
+      left: 0;
+      bottom: 0;
+    }
+
+    .is-active {
+      display: block;
+      transform: translateX(0%);
+    }
+
+    .list-title {
+      span {
+        padding: 0 12px;
+      }
+    }
   }
 }

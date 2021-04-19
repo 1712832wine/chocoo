@@ -1,1 +1,11 @@
-.new-arrival {}
+@media screen and (min-width: 1024px) {
+  .new-arrival {
+    background: #dcdcdc;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .new-arrival {
+    background-color: #fff;
+  }
+}

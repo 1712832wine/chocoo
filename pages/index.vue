@@ -13,7 +13,7 @@
     </Banner>
     <!-- BEST SELLER -->
     <Description :desc="desc_bestseller" class="arrdecs padding-top" />
-    <NewArrival />
+    <NewArrival class="best-seller" :responsive="best_seller_responsive" />
   </div>
 </template>
 
@@ -27,6 +27,8 @@ export default {
   components: { Carousel, Description, NewArrival, Banner },
   data() {
     return {
+      best_seller_responsive:
+        "is-one-third-desktop is-half-tablet is-12-mobile",
       desc_bestseller: {
         title: "best seller",
         content:
@@ -71,6 +73,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/page_home.scss";
 </style>

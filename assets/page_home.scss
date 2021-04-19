@@ -2,4 +2,33 @@
   .padding-top {
     padding-top: 40px;
   }
+
+  // BEST SELLER
+  .best-seller {
+    .card {
+      display: flex;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      &-image {
+        flex: 0 0 50%;
+        position: relative;
+
+        .image {
+          height: 100%;
+
+          img {
+            height: 100%;
+            border-radius: 15px 0 0 15px;
+
+          }
+        }
+      }
+
+      &-content {
+        padding: 25px;
+        width: 100%;
+      }
+    }
+  }
 }

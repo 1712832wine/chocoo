@@ -1,5 +1,6 @@
 <template>
   <b-navbar class="header">
+    <div class="wrapper"></div>
     <template #brand>
       <b-navbar-item tag="nuxt-link" :to="{ path: '/' }" class="logo">
         <img
@@ -16,6 +17,7 @@
         :to="{ path: item.to }"
         class="list-title"
       >
+        <b-icon icon="heart" size="is-small"></b-icon>
         {{ item.title }}
       </b-navbar-item>
     </template>
@@ -68,6 +70,6 @@ export default {
   props: {},
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/assets/header.scss";
 </style>

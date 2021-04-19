@@ -1,10 +1,11 @@
 <template>
   <div class="new-arrival container box">
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-mobile">
       <div
         v-for="item in card"
         :key="item.id"
-        class="column is-one-quarter-desktop is-half-tablet is-mobile"
+        class="column"
+        :class="responsive"
       >
         <Card :card="item" />
       </div>
@@ -15,6 +16,12 @@
 import Card from "@/components/Card/Card.vue";
 export default {
   components: { Card },
+  props: {
+    responsive: {
+      type: String,
+      default: "is-one-quarter-desktop is-one-third-tablet is-half-mobile",
+    },
+  },
   data() {
     return {
       card: [
@@ -98,7 +105,4 @@ export default {
 </script>
 <style lang="scss">
 @import "@/assets/new_arrival.scss";
-.new-arrival {
-  background: #dcdcdc;
-}
 </style>

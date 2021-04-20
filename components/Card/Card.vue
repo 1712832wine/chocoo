@@ -1,5 +1,6 @@
 <template>
   <!-- Card -->
+  <!-- Card -->
   <nuxt-link class="card" tag="div" :to="`/item-detail/${card.id}`">
     <div class="card-image">
       <b-image :src="card.src" alt="An image"> </b-image>
